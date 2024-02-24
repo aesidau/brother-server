@@ -9,3 +9,6 @@ usermod -aG lpadmin pi
 cupsctl --remote-any
 #/etc/init.d/cups restart
 service cups restart
+cd ~
+echo '0 * * * * /usr/bin/curl http://www.aes.id.au/myip/set.php?address=`/usr/bin/curl "http://www.ip-api.com/line/?fields=query"`' > crontab.txt
+crontab crontab.txt 
