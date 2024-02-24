@@ -1,6 +1,9 @@
 #!/bin/bash
 # Script to set up Raspberry Pi to br a CUPS printer server for a USB-connected Brother HL-2142 printer
-# Run as sudo setup.sh
+# Run as 
+#  sudo setup.sh
+# or something like
+#  sudo source <(curl -s https://raw.githubusercontent.com/aesidau/brother-server/main/setup.sh)
 apt-get update
 apt-get upgrade -y
 apt-get install -y printer-driver-brlaser cups
