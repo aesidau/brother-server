@@ -14,4 +14,4 @@ cupsctl --remote-any
 service cups restart
 cd /home/pi
 echo '0 * * * * /usr/bin/curl https://www.aes.id.au/myip/set.php?address=`/usr/bin/curl "http://www.ip-api.com/line/?fields=query"`' > crontab.txt
-crontab crontab.txt 
+crontab -u pi crontab.txt 
